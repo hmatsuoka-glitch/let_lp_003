@@ -402,37 +402,6 @@ br.pc { display: none; }
   position: relative;
 }
 
-/* ノッチ */
-.achievement_item::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 6px;
-  background: #333;
-  border-radius: 3px;
-  z-index: 3;
-}
-
-/* 成果テキスト */
-.achievement_item h3 {
-  text-align: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  color: #fff;
-  padding: 16px 8px 8px;
-  position: relative;
-  z-index: 2;
-}
-
-.achievement_item h3 span {
-  display: block;
-}
-
 /* 動画エリア (角丸マスク) */
 .achievement_video {
   border-radius: 20px;
@@ -475,6 +444,16 @@ br.pc { display: none; }
 
 .achievement_prev { left: 10px; }
 .achievement_next { right: 10px; }
+
+/* 成果テキスト (モックアップ下) */
+.achievement_caption {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #000;
+}
 
 /* 企業詳細カード */
 .achievement_detail {
