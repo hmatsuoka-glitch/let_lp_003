@@ -243,14 +243,14 @@ button {
 
 .concerns-bubbles {
   position: relative;
-  max-width: 380px;
+  max-width: 400px;
   margin: 0 auto;
-  min-height: 360px;
+  min-height: 420px;
 }
 
 .concerns-person {
   display: block;
-  width: 260px;
+  width: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
