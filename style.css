@@ -212,16 +212,19 @@ button {
 
 .concerns-bubbles {
   position: relative;
-  max-width: 340px;
+  max-width: 380px;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-height: 280px;
 }
 
 .concerns-person {
   display: block;
   width: 140px;
-  margin: 30px auto 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 /* 吹き出し */
@@ -235,6 +238,8 @@ button {
   border-radius: 4px;
   transform: skewX(-4deg);
   line-height: 1.4;
+  position: absolute;
+  z-index: 2;
 }
 
 .bubble strong {
@@ -246,21 +251,18 @@ button {
 }
 
 .bubble-1 {
-  display: block;
-  text-align: right;
-  margin-bottom: -15px;
+  top: 0;
+  right: 0;
 }
 
 .bubble-2 {
-  display: block;
-  text-align: left;
-  margin-top: -20px;
+  top: 35%;
+  left: 0;
 }
 
 .bubble-3 {
-  display: block;
-  text-align: right;
-  margin-top: -20px;
+  bottom: 20px;
+  right: 10px;
 }
 
 /* テキストボックス */
