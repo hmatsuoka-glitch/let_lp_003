@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  color: #333;
+  color: #000;
   line-height: 1.7;
   background: #fff;
   overflow-x: hidden;
@@ -38,15 +38,12 @@ img {
 }
 
 /* ========================================
-   Header
+   Header (relative, not fixed)
    ======================================== */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   background: #000;
-  z-index: 1000;
   height: 53px;
 }
 
@@ -65,109 +62,128 @@ img {
 }
 
 /* ========================================
-   Hero Section
+   Section Heading (bordered box style)
    ======================================== */
-.hero {
-  margin-top: 53px;
+.section-heading-box {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
 
-.hero-bg {
+/* center the inline-block heading */
+.achievement .section-heading-box,
+.up-section .section-heading-box,
+.voice .section-heading-box,
+.flow .section-heading-box,
+.faq .section-heading-box,
+.contact .section-heading-box {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+/* ========================================
+   MV (Hero) Section
+   ======================================== */
+.mv {
+  background: #e8e8e8;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  min-height: 600px;
+  overflow: hidden;
+}
+
+.mv-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 20px;
   display: flex;
+  gap: 40px;
   align-items: center;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+.mv-phone {
+  flex-shrink: 0;
+  width: 400px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+.mv-phone img {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  color: #fff;
 }
 
-.hero-subtitle {
-  font-size: 22px;
+.mv-right {
+  flex: 1;
+}
+
+.mv-sub {
+  font-size: 20px;
   font-weight: 700;
+  color: #000;
 }
 
-.hero-title {
+.mv-title {
   font-size: 72px;
   font-weight: 900;
   line-height: 1.1;
+  color: #000;
   margin-bottom: 8px;
 }
 
-.hero-dot {
-  color: #fff;
+.mv-dot {
+  color: #000;
 }
 
-.hero-sns-sub {
+.mv-sns-sub {
   font-size: 16px;
+  color: #000;
   margin-bottom: 4px;
 }
 
-.hero-sns-title {
+.mv-sns-title {
   font-size: 48px;
   font-weight: 900;
-  margin-bottom: 32px;
+  color: #000;
+  margin-bottom: 16px;
 }
 
-.hero-badges {
+.mv-question {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.mv-badges {
   display: flex;
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
-.hero-badge {
-  width: 123px;
-  height: 123px;
+.mv-badge-img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
 }
 
-.hero-badge p {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.badge-zero {
-  font-size: 20px;
-  font-weight: 900;
-}
-
-/* CTA Button */
-.cta-btn {
+/* CTA Button - Blue variant (primary) */
+.cta-btn--blue {
   display: inline-block;
-  background: #c00;
+  background: #004e9b;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
   padding: 16px 40px;
   border-radius: 50px;
   transition: opacity 0.3s;
+  text-align: center;
 }
 
-.cta-btn:hover {
+.cta-btn--blue:hover {
   opacity: 0.85;
 }
 
@@ -179,67 +195,81 @@ img {
 }
 
 /* ========================================
-   Problems Section
+   Concerns Section
    ======================================== */
-.problems {
-  background: #000;
+.concerns {
   color: #fff;
 }
 
-.problems-header {
-  background: #000;
-  padding: 48px 20px 32px;
+.concerns-header {
+  background: #444;
+  padding: 48px 20px 40px;
   text-align: center;
   position: relative;
 }
 
-.problems-header::after {
+.concerns-header::after {
   content: '';
   position: absolute;
   bottom: -30px;
   left: 0;
   width: 100%;
   height: 60px;
-  background: #000;
-  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+  background: #444;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
   z-index: 1;
 }
 
-.problems-header h2 {
+.concerns-header h2 {
   font-size: 26px;
   font-weight: 800;
 }
 
-.problems-header .highlight {
-  color: #fff;
+.concerns-highlight {
   border-bottom: 3px solid #fff;
   padding-bottom: 2px;
 }
 
-.problems-body {
-  background: #1a1a1a;
+.concerns-body {
+  background: #333;
   padding: 60px 0 48px;
 }
 
-.problems-content {
+.concerns-bubbles {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.bubble {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.concerns-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: center;
 }
 
-.problems-text p {
+.concerns-text p {
   font-size: 15px;
   line-height: 1.9;
   margin-bottom: 16px;
 }
 
-.problems-text strong {
-  color: #fff;
+.concerns-text strong {
   font-weight: 800;
 }
 
-.problems-image img {
+.concerns-image img {
   border-radius: 8px;
   width: 100%;
 }
@@ -250,58 +280,98 @@ img {
 .about {
   padding: 80px 0;
   background: #fff;
+  position: relative;
 }
 
-.about-top {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 60px;
+.about-hero-img {
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden;
 }
 
-.about-logo img {
+.about-hero-img img {
   width: 100%;
-  max-width: 376px;
+  border-radius: 8px;
 }
 
-.about-text p {
+.about-bg-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(200, 200, 200, 0.3);
+  letter-spacing: 8px;
+  pointer-events: none;
+}
+
+.about-text-block {
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.about-text-block p {
   font-size: 15px;
   line-height: 1.9;
   margin-bottom: 16px;
   color: #333;
 }
 
-.about-text strong {
+.about-text-block strong {
   color: #004e9b;
   font-weight: 700;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* Stats Medals */
+.stats-medals {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
   margin-bottom: 24px;
+  background: #000;
+  border-radius: 12px;
+  padding: 40px 24px;
 }
 
-.stat-item {
+.medal-item {
   text-align: center;
 }
 
-.stat-item img {
-  width: 100%;
-  max-width: 270px;
-  margin: 0 auto 12px;
-  border-radius: 8px;
+.medal-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #d4a843;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 168, 67, 0.1);
+  margin: 0 auto 8px;
 }
 
-.stat-label {
-  font-size: 14px;
-  color: #555;
+.medal-label {
+  font-size: 12px;
+  color: #d4a843;
+  font-weight: 600;
 }
 
-.stat-label strong {
-  color: #004e9b;
+.medal-number {
+  font-size: 40px;
+  font-weight: 900;
+  color: #d4a843;
+  line-height: 1.2;
+}
+
+.medal-number span {
+  font-size: 16px;
+}
+
+.medal-note {
+  font-size: 12px;
+  color: #999;
 }
 
 .stats-notes {
@@ -315,20 +385,9 @@ img {
 }
 
 /* ========================================
-   Section Heading (shared)
+   Achievement Carousel
    ======================================== */
-.section-heading {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 40px;
-  line-height: 1.5;
-}
-
-/* ========================================
-   Cases Carousel
-   ======================================== */
-.cases {
+.achievement {
   padding: 80px 0;
   background: #fff;
 }
@@ -425,17 +484,17 @@ img {
 }
 
 /* ========================================
-   Effect UP Section
+   UP Section
    ======================================== */
-.effect-up {
+.up-section {
   padding: 80px 0;
   background: #fff;
 }
 
 .up-badges {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
 }
 
 .up-badge {
@@ -443,9 +502,9 @@ img {
 }
 
 .up-badge img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 12px;
 }
 
 .up-badge p {
@@ -461,54 +520,54 @@ img {
 }
 
 /* ========================================
-   Strengths Section
+   Strength Section
    ======================================== */
-.strengths {
+.strength {
   padding: 80px 0;
   background: #f5f5f5;
 }
 
-.strengths-intro {
+.strength-intro {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.strengths-intro h3 {
+.strength-intro h3 {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 12px;
 }
 
-.strengths-intro p {
+.strength-intro p {
   font-size: 15px;
   color: #555;
 }
 
-.strengths-intro .note {
+.strength-intro .note {
   font-size: 12px;
   color: #7c7c7c;
   margin-top: 8px;
 }
 
-.strengths-lead {
+.strength-lead {
   text-align: center;
   font-size: 15px;
   color: #7c7c7c;
   margin-bottom: 8px;
 }
 
-.strengths-title {
+.strength-title {
   text-align: center;
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 48px;
-  color: #333;
+  color: #000;
 }
 
-.strengths-grid {
+.strength-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 48px;
   margin-bottom: 60px;
 }
 
@@ -520,30 +579,60 @@ img {
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
 }
 
-.strength-number {
-  font-size: 56px;
-  font-weight: 900;
-  color: #004e9b;
-  line-height: 1;
+.strength-num-area {
+  position: relative;
   flex-shrink: 0;
-  width: 60px;
+  width: 80px;
 }
 
-.strength-content h3 {
+.strength-num {
+  font-size: 72px;
+  font-weight: 900;
+  color: #000;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.strength-red-line {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 60px;
+  height: 80px;
+  border-left: 4px solid #cc0000;
+  transform: rotate(-20deg);
+  transform-origin: top left;
+}
+
+.strength-body {
+  flex: 1;
+}
+
+.strength-body h3 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   line-height: 1.5;
-  color: #333;
+  color: #000;
 }
 
-.strength-content h3 strong {
+.strength-body h3 strong {
   color: #004e9b;
 }
 
-.strength-content p {
+.strength-body img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.strength-body p {
   font-size: 14px;
   color: #555;
   line-height: 1.8;
@@ -567,7 +656,7 @@ img {
 }
 
 .free-price {
-  color: #c00;
+  color: #cc0000;
   font-size: 48px;
   font-weight: 900;
 }
@@ -578,45 +667,65 @@ img {
 }
 
 /* ========================================
-   Testimonials Carousel
+   Voice Section (Testimonials)
    ======================================== */
-.testimonials {
+.voice {
   padding: 80px 0;
   background: #fff;
 }
 
-.testimonial-card {
-  background: #f5f5f5;
+.voice-card {
+  border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 24px;
+  overflow: hidden;
+  background: #fff;
 }
 
-.testimonial-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 16px;
-}
-
-.testimonial-card h4 {
-  font-size: 16px;
+.voice-card-tab {
+  background: #eee;
+  padding: 10px 20px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 8px;
+  color: #333;
+  border-radius: 12px 12px 0 0;
 }
 
-.testimonial-headline {
+.voice-card-inner {
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.voice-card-avatar {
+  flex-shrink: 0;
+}
+
+.voice-card-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.voice-card-content {
+  flex: 1;
+}
+
+.voice-headline {
   font-size: 16px;
   font-weight: 700;
   color: #004e9b;
   margin-bottom: 12px;
+  line-height: 1.5;
 }
 
-.testimonial-detail {
+.voice-detail {
   font-size: 14px;
   color: #555;
   line-height: 1.8;
 }
 
-.testimonials-note {
+.voice-note {
   text-align: center;
   font-size: 12px;
   color: #7c7c7c;
@@ -683,29 +792,17 @@ img {
 
 .flow-step {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 32px;
-  position: relative;
-}
-
-.flow-step:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 22px;
-  top: 48px;
-  width: 2px;
-  height: calc(100% - 16px);
-  background: #004e9b;
+  gap: 16px;
+  align-items: center;
 }
 
 .flow-number {
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #004e9b;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -713,15 +810,32 @@ img {
   flex-shrink: 0;
 }
 
+.flow-icon {
+  flex-shrink: 0;
+}
+
+.flow-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
 .flow-body h4 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .flow-body p {
   font-size: 14px;
   color: #555;
+}
+
+.flow-connector {
+  width: 2px;
+  height: 24px;
+  background: #004e9b;
+  margin-left: 19px;
 }
 
 /* ========================================
@@ -799,7 +913,7 @@ img {
 .faq-a {
   width: 32px;
   height: 32px;
-  background: #c00;
+  background: #cc0000;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -855,7 +969,7 @@ img {
 }
 
 .required {
-  background: #c00;
+  background: #cc0000;
   color: #fff;
   font-size: 11px;
   padding: 2px 8px;
@@ -901,7 +1015,7 @@ img {
 
 .submit-btn {
   display: inline-block;
-  background: #c00;
+  background: #004e9b;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
@@ -966,15 +1080,15 @@ img {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.6);
   padding: 12px 20px;
   text-align: center;
 }
 
 .floating-cta-btn {
   display: inline-block;
-  background: #c00;
+  background: #004e9b;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -998,64 +1112,80 @@ img {
    Responsive
    ======================================== */
 @media (max-width: 768px) {
-  .hero-title {
+  .mv-inner {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 20px;
+  }
+
+  .mv-phone {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .mv-right {
+    text-align: center;
+  }
+
+  .mv-title {
     font-size: 48px;
   }
 
-  .hero-sns-title {
+  .mv-sns-title {
     font-size: 32px;
   }
 
-  .hero-badges {
-    gap: 10px;
+  .mv-badges {
+    justify-content: center;
+    gap: 8px;
   }
 
-  .hero-badge {
+  .mv-badge-img {
     width: 100px;
     height: 100px;
   }
 
-  .hero-badge p {
-    font-size: 10px;
-  }
-
-  .problems-content {
+  .concerns-content {
     grid-template-columns: 1fr;
   }
 
-  .about-top {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .about-bg-text {
+    font-size: 32px;
   }
 
-  .about-logo img {
-    margin: 0 auto;
-    max-width: 260px;
+  .stats-medals {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .medal-circle {
+    width: 150px;
+    height: 150px;
   }
 
-  .stat-item img {
-    max-width: 200px;
+  .medal-number {
+    font-size: 32px;
   }
 
   .up-badges {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
   .strength-item {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     padding: 24px;
   }
 
-  .strength-number {
-    font-size: 40px;
+  .strength-num {
+    font-size: 48px;
+  }
+
+  .strength-title {
+    font-size: 26px;
   }
 
   .free-price {
@@ -1074,6 +1204,10 @@ img {
     right: 4px;
   }
 
+  .voice-card-inner {
+    flex-direction: column;
+  }
+
   .mid-cta-text {
     font-size: 18px;
   }
@@ -1082,44 +1216,49 @@ img {
     padding: 24px 16px;
   }
 
-  .section-heading {
-    font-size: 22px;
+  .section-heading-box {
+    font-size: 20px;
+    padding: 8px 20px;
   }
 
-  .strengths-title {
-    font-size: 26px;
+  .flow-step {
+    gap: 12px;
   }
 
-  .cta-btn {
-    font-size: 14px;
-    padding: 14px 28px;
+  .flow-icon img {
+    width: 48px;
+    height: 48px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
+  .mv-title {
     font-size: 36px;
   }
 
-  .hero-sns-title {
+  .mv-sns-title {
     font-size: 26px;
   }
 
-  .hero-badges {
+  .mv-badges {
     flex-wrap: wrap;
-    justify-content: center;
   }
 
-  .hero-badge {
+  .mv-badge-img {
     width: 90px;
     height: 90px;
   }
 
-  .problems-header h2 {
+  .concerns-header h2 {
     font-size: 20px;
   }
 
-  .strengths-intro h3 {
+  .strength-intro h3 {
     font-size: 20px;
+  }
+
+  .concerns-bubbles {
+    flex-direction: column;
+    align-items: center;
   }
 }
