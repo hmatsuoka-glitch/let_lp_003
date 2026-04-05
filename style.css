@@ -55,7 +55,7 @@ button {
 .header {
   position: relative;
   height: 53px;
-  background: #000;
+  background: #fff;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -734,13 +734,11 @@ br.pc { display: none; }
 }
 
 .red-line {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  width: 60px;
-  height: 80px;
-  border-left: 4px solid #cc0000;
-  transform: rotate(-20deg);
+  width: 50px;
+  height: 4px;
+  background: #cc0000;
+  margin-top: -8px;
+  margin-bottom: 16px;
 }
 
 .strength-item h3 {
@@ -1248,7 +1246,7 @@ br.pc { display: none; }
 
   .red-line {
     width: 40px;
-    height: 54px;
+    height: 4px;
   }
 
   .voice-card {
