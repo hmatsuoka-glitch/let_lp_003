@@ -85,6 +85,9 @@ button {
    ============================================ */
 .mv {
   background: #e8e8e8;
+  min-height: calc(100vh - 53px);
+  display: flex;
+  align-items: center;
 }
 
 .mv-inner {
@@ -94,7 +97,8 @@ button {
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 48px 20px;
+  padding: 40px 20px;
+  width: 100%;
 }
 
 .mv-phone {
