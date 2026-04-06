@@ -667,7 +667,7 @@ br.pc { display: none; }
 
 .result-person {
   display: block;
-  width: 120px;
+  width: 200px;
   margin: 20px auto 0;
 }
 
@@ -699,7 +699,7 @@ br.pc { display: none; }
   font-size: 36px;
   font-weight: 900;
   margin-bottom: 48px;
-  line-height: 1.2;
+  line-height: 0.8;
 }
 
 .strength-title-sub {
@@ -1810,9 +1810,7 @@ br.pc { display: none; }
   }
 
   .result-person {
-    width: 100px;
-    right: 10px;
-    bottom: 10px;
+    width: 160px;
   }
 
   .mv-badges {
