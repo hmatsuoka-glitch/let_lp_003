@@ -72,12 +72,13 @@ button {
    ============================================ */
 .section-heading-box {
   border: 2px solid #000;
-  padding: 10px 32px;
+  padding: 12px 40px;
   display: table;
   margin: 0 auto 40px;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: 900;
   text-align: center;
+  letter-spacing: 0.04em;
 }
 
 /* ============================================
@@ -395,15 +396,15 @@ br.pc { display: none; }
 
 /* 見出し: 斜体枠線 */
 .achievement h2 {
-  width: 252px;
+  width: 300px;
   border: 3px solid #000;
   margin: 0 auto 2.2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-align: center;
   transform: skewX(-20deg);
-  padding: 4px 0 6px;
+  padding: 6px 0 8px;
 }
 
 .achievement h2 span {
@@ -695,15 +696,15 @@ br.pc { display: none; }
 
 .strength-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
   margin-bottom: 48px;
   line-height: 1.4;
 }
 
 .strength-title-sub {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   color: #7c7c7c;
   display: block;
 }
@@ -935,8 +936,8 @@ br.pc { display: none; }
 }
 
 .results-subtitle {
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 900;
   color: #000;
   line-height: 1.5;
   margin-bottom: 0;
@@ -1955,24 +1956,24 @@ br.pc { display: none; }
 
   .results-flow-steps {
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
   }
 
   .results-flow-step {
-    flex-direction: row;
-    max-width: 100%;
-    gap: 16px;
-    padding: 20px 16px;
+    flex-direction: column;
+    max-width: 240px;
+    gap: 12px;
+    padding: 24px 20px;
   }
 
   .results-flow-icon {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     flex-shrink: 0;
   }
 
   .results-flow-label {
-    text-align: left;
+    text-align: center;
   }
 
   .results-flow-arrow {
