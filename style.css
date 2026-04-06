@@ -665,11 +665,9 @@ br.pc { display: none; }
 }
 
 .result-person {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+  display: block;
   width: 120px;
-  opacity: 0.8;
+  margin: 20px auto 0;
 }
 
 /* ============================================
