@@ -844,6 +844,479 @@ br.pc { display: none; }
 }
 
 /* ============================================
+   Results (導入効果シミュレーション)
+   ============================================ */
+.results {
+  padding: 80px 0;
+  background: #f5f5f5;
+}
+
+.results-lead {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 48px;
+}
+
+.text-red {
+  color: #cc0000;
+  font-weight: 700;
+}
+
+.results-subtitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* --- 採用単価バーチャート --- */
+.results-comparison {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 40px;
+}
+
+.results-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.results-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.results-bar-label {
+  width: 90px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.results-bar-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.results-bar-track {
+  flex: 1;
+  background: #eee;
+  border-radius: 6px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.results-bar {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  min-width: 120px;
+}
+
+.results-bar--before {
+  background: linear-gradient(90deg, #666, #4a4a4a);
+}
+
+.results-bar--after {
+  background: linear-gradient(90deg, #004e9b, #0068d0);
+}
+
+.results-bar-value {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.results-bar-unit {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.results-cost-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: #004e9b;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 24px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.results-cost-down {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.results-cost-num {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.results-cost-num strong {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* --- 売上シミュレーション --- */
+.results-simulation {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 40px;
+}
+
+.results-sim-desc {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.results-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.results-table thead th {
+  padding: 10px 8px;
+  font-weight: 700;
+  font-size: 13px;
+  border-bottom: 2px solid #000;
+}
+
+.results-th-before {
+  color: #666;
+  text-align: center;
+  width: 25%;
+}
+
+.results-th-arrow {
+  width: 30px;
+  text-align: center;
+}
+
+.results-th-after {
+  color: #004e9b;
+  text-align: center;
+  width: 25%;
+}
+
+.results-table tbody td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.results-td-label {
+  text-align: left !important;
+  font-weight: 700;
+  color: #333;
+}
+
+.results-td-before {
+  color: #666;
+}
+
+.results-td-arrow {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.results-td-after {
+  color: #004e9b;
+  font-weight: 600;
+}
+
+.results-td-after strong {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.results-tr-highlight td {
+  background: #f0f6ff;
+  border-bottom: 2px solid #004e9b;
+}
+
+.results-tr-highlight .results-td-label {
+  color: #004e9b;
+}
+
+.results-tr-highlight .results-td-after strong {
+  color: #cc0000;
+  font-size: 20px;
+}
+
+/* インパクト数値バッジ */
+.results-impact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.results-impact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.results-impact-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.results-impact-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #cc0000;
+}
+
+.results-impact-value strong {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.results-impact-divider {
+  width: 1px;
+  height: 48px;
+  background: #ddd;
+}
+
+.results-note {
+  text-align: center;
+  font-size: 11px;
+  color: #7c7c7c;
+  line-height: 1.6;
+}
+
+/* --- ビジネスモデルフロー図 --- */
+.results-flow {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.results-flow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.results-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  max-width: 160px;
+}
+
+.results-flow-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-flow-icon--1 {
+  background: #004e9b;
+}
+
+.results-flow-icon--2 {
+  background: #333;
+}
+
+.results-flow-icon--3 {
+  background: #cc0000;
+}
+
+.results-flow-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+  color: #333;
+}
+
+.results-flow-label strong {
+  font-weight: 900;
+  font-size: 16px;
+  color: #000;
+}
+
+.results-flow-arrow {
+  font-size: 20px;
+  color: #004e9b;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: -24px;
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .results {
+    padding: 60px 0;
+  }
+
+  .results-comparison,
+  .results-simulation,
+  .results-flow {
+    padding: 24px 16px;
+  }
+
+  .results-subtitle {
+    font-size: 18px;
+  }
+
+  .results-bar-label {
+    width: 70px;
+    font-size: 11px;
+  }
+
+  .results-bar-value {
+    font-size: 12px;
+  }
+
+  .results-bar {
+    min-width: 100px;
+  }
+
+  .results-cost-num strong {
+    font-size: 28px;
+  }
+
+  .results-impact-value strong {
+    font-size: 28px;
+  }
+
+  .results-flow-steps {
+    gap: 8px;
+  }
+
+  .results-flow-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .results-flow-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .results-flow-label {
+    font-size: 12px;
+  }
+
+  .results-flow-label strong {
+    font-size: 14px;
+  }
+
+  .results-flow-arrow {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .results-lead {
+    font-size: 13px;
+  }
+
+  .results-bar-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .results-bar-label {
+    width: auto;
+    text-align: left;
+  }
+
+  .results-bar-track {
+    width: 100%;
+    height: 36px;
+  }
+
+  .results-table {
+    font-size: 13px;
+  }
+
+  .results-flow-steps {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .results-flow-step {
+    flex-direction: row;
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .results-flow-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  .results-flow-label {
+    text-align: left;
+  }
+
+  .results-flow-arrow {
+    transform: rotate(90deg);
+    margin-top: 0;
+  }
+
+  .results-impact {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .results-impact-divider {
+    width: 48px;
+    height: 1px;
+  }
+}
+
+/* ============================================
    Mid CTA
    ============================================ */
 .mid-cta-bg {
