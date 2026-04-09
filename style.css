@@ -609,22 +609,22 @@ br.pc { display: none; }
    ============================================ */
 .cost-sim-intro {
   background: linear-gradient(135deg, #1a2a4a, #0a1a3a);
-  padding: 48px 20px;
+  padding: 36px 20px;
   text-align: center;
   color: #fff;
 }
 
 .cost-sim-intro-label {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 6px;
 }
 
 .cost-sim-intro-title {
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   font-weight: 900;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .text-orange {
@@ -632,9 +632,11 @@ br.pc { display: none; }
 }
 
 .cost-sim-intro-desc {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 /* ============================================
