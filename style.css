@@ -1689,6 +1689,24 @@ br.pc { display: none; }
     padding: 20px;
   }
 
+  .voice-slide {
+    min-width: 80%;
+  }
+
+  .voice-card-photo img {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* Cost Simulation — Tablet */
+  .cost-compare-card {
+    padding: 32px 24px;
+  }
+
+  .cost-bar-text {
+    font-size: 0.75rem;
+  }
+
   .section-heading-box {
     font-size: 20px;
     padding: 8px 24px;
@@ -1770,8 +1788,106 @@ br.pc { display: none; }
     max-width: 100%;
   }
 
+  .voice-slide {
+    min-width: 90%;
+  }
+
+  .voice-card-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
   .voice-card-headline {
     font-size: 16px;
+  }
+
+  .voice-card-detail {
+    font-size: 13px;
+  }
+
+  /* Cost Simulation — Mobile */
+  .cost-sim-intro {
+    padding: 24px 16px;
+  }
+
+  .cost-sim-intro-title {
+    font-size: 16px;
+  }
+
+  .cost-sim-intro-desc {
+    font-size: 10px;
+  }
+
+  .cost-cards-section {
+    padding: 24px 0 40px;
+  }
+
+  .cost-cards-grid {
+    gap: 16px;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .cost-compare-card {
+    padding: 24px 16px;
+  }
+
+  .cost-compare-num {
+    font-size: 1.6rem;
+  }
+
+  .cost-compare-title {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .cost-bar {
+    height: 26px;
+  }
+
+  .cost-bar-text {
+    font-size: 0.7rem;
+  }
+
+  .cost-bar-label {
+    font-size: 0.8rem;
+  }
+
+  .cost-result-big {
+    font-size: 2.8rem;
+  }
+
+  .cost-result-percent {
+    font-size: 1.6rem;
+  }
+
+  .sim-table-header,
+  .sim-table-row,
+  .sim-table-highlight {
+    grid-template-columns: 1fr 60px 24px 60px;
+    font-size: 0.8rem;
+  }
+
+  .sim-highlight-value {
+    font-size: 1.3rem;
+  }
+
+  .sim-annual-big {
+    font-size: 2rem;
+  }
+
+  .biz-flow-step {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .biz-flow-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .biz-flow-main {
+    font-size: 1rem;
   }
 
   .floating-cta {
