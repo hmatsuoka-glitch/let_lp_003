@@ -880,7 +880,7 @@ br.pc { display: none; }
 }
 
 .sim-annual-box {
-  background: linear-gradient(135deg, #004e9b, #0a1a3a);
+  background: linear-gradient(135deg, #4a90d9, #004e9b);
   border-radius: 12px;
   padding: 24px 20px;
   text-align: center;
