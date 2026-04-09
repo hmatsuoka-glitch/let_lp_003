@@ -1149,6 +1149,7 @@ br.pc { display: none; }
 
 .voice-carousel {
   position: relative;
+  overflow: hidden;
 }
 
 .voice-track {
@@ -1157,8 +1158,8 @@ br.pc { display: none; }
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  gap: 16px;
-  padding-bottom: 8px;
+  gap: 12px;
+  padding: 0 4% 8px;
 }
 
 .voice-track::-webkit-scrollbar {
@@ -1169,6 +1170,7 @@ br.pc { display: none; }
   min-width: 85%;
   scroll-snap-align: center;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .voice-card {
@@ -1176,8 +1178,11 @@ br.pc { display: none; }
   border-radius: 12px;
   background: #fff;
   padding: 24px;
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .voice-card-company {
