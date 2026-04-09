@@ -1058,7 +1058,7 @@ br.pc { display: none; }
   text-align: center;
   font-size: 32px;
   font-weight: 900;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   line-height: 1.4;
 }
 
@@ -1119,6 +1119,7 @@ br.pc { display: none; }
 .strength-item img {
   max-width: 320px;
   border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .strength-free-title {
