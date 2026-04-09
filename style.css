@@ -608,35 +608,43 @@ br.pc { display: none; }
    Cost Simulation Intro
    ============================================ */
 .cost-sim-intro {
-  background: linear-gradient(135deg, #1a2a4a, #0a1a3a);
-  padding: 36px 20px;
+  background: #0f1c33;
+  padding: 32px 20px;
   text-align: center;
   color: #fff;
 }
 
 .cost-sim-intro-label {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 6px;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 8px;
+  font-weight: 400;
 }
 
 .cost-sim-intro-title {
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 900;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  color: #fff;
 }
 
 .text-orange {
   color: #e67e22;
+  font-weight: 900;
 }
 
 .cost-sim-intro-desc {
-  font-size: 0.75rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 360px;
+  font-size: 11px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 320px;
   margin: 0 auto;
+}
+
+.cost-sim-intro-desc .text-orange {
+  color: #e67e22;
+  font-weight: 700;
 }
 
 /* ============================================
