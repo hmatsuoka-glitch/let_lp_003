@@ -608,7 +608,7 @@ br.pc { display: none; }
    COST SIMULATION 導入効果
    ============================================ */
 .cost-sim-intro {
-  background: #0f1c33;
+  background: linear-gradient(135deg, #4a90d9, #004e9b);
   padding: 32px 20px;
   text-align: center;
   color: #fff;
