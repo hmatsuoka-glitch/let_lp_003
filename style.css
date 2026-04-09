@@ -1172,6 +1172,7 @@ br.pc { display: none; }
   scroll-snap-align: center;
   flex-shrink: 0;
   box-sizing: border-box;
+  display: flex;
 }
 
 .voice-card {
@@ -1180,6 +1181,10 @@ br.pc { display: none; }
   background: #fff;
   padding: 24px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  width: 100%;
 }
 
 .voice-card-company {
@@ -1213,6 +1218,7 @@ br.pc { display: none; }
   font-size: 14px;
   color: #555;
   line-height: 1.9;
+  flex-grow: 1;
 }
 
 .voice-note {
