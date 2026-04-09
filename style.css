@@ -605,11 +605,48 @@ br.pc { display: none; }
 }
 
 /* ============================================
+   Cost Simulation Intro
+   ============================================ */
+.cost-sim-intro {
+  background: linear-gradient(135deg, #1a2a4a, #0a1a3a);
+  padding: 48px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.cost-sim-intro-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.cost-sim-intro-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.text-orange {
+  color: #e67e22;
+}
+
+.cost-sim-intro-desc {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
    Cost Compare (採用単価の変化)
    ============================================ */
 .cost-compare {
-  padding: 60px 0;
+  padding: 40px 0;
   background: #f5f5f5;
+}
+
+.cost-compare + .cost-compare {
+  padding-top: 0;
 }
 
 .cost-compare-card {
@@ -731,6 +768,195 @@ br.pc { display: none; }
   font-weight: 500;
   margin-top: 6px;
   opacity: 0.85;
+}
+
+/* ============================================
+   02 Simulation Table
+   ============================================ */
+.sim-intro-text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.text-blue-underline {
+  color: #004e9b;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.sim-table {
+  margin-bottom: 24px;
+}
+
+.sim-table-header,
+.sim-table-row,
+.sim-table-highlight {
+  display: grid;
+  grid-template-columns: 1fr 70px 30px 70px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.sim-table-header {
+  border-bottom: 1px solid #ccc;
+  font-size: 0.8rem;
+  color: #888;
+  padding-bottom: 8px;
+}
+
+.sim-col-label {
+  font-weight: 700;
+  color: #333;
+}
+
+.sim-col-before {
+  text-align: center;
+  color: #999;
+}
+
+.sim-col-arrow {
+  text-align: center;
+  color: #ccc;
+}
+
+.sim-col-after {
+  text-align: center;
+  color: #333;
+}
+
+.sim-bold {
+  font-weight: 800;
+}
+
+.sim-red {
+  color: #cc0000;
+}
+
+.sim-table-highlight {
+  border-bottom: none;
+  background: #f0f5fb;
+  border-radius: 8px;
+  padding: 16px 12px;
+  margin-top: 8px;
+}
+
+.sim-table-highlight .sim-col-label {
+  font-size: 0.9rem;
+}
+
+.sim-table-highlight .sim-col-before {
+  font-size: 0.85rem;
+}
+
+.sim-highlight-value {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #cc0000;
+  line-height: 1.2;
+}
+
+.sim-unit {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sim-annual-box {
+  background: linear-gradient(135deg, #ffe0e6, #ffd0da);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.sim-annual-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.sim-annual-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.sim-annual-big {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #000;
+}
+
+/* ============================================
+   03 Business Model Flow
+   ============================================ */
+.biz-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.biz-flow-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px 24px;
+  width: 100%;
+}
+
+.biz-flow-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.biz-flow-icon--blue {
+  background: #004e9b;
+}
+
+.biz-flow-icon--dark {
+  background: #333;
+}
+
+.biz-flow-icon--red {
+  background: #cc0000;
+}
+
+.biz-flow-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.biz-flow-sub {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.biz-flow-main {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.biz-flow-arrow {
+  font-size: 1.2rem;
+  color: #004e9b;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 0;
 }
 
 /* ============================================
