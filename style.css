@@ -1674,6 +1674,46 @@ br.pc { display: none; }
     width: 48px;
     height: 48px;
   }
+
+  /* Voice Cards — PC 4カラム横並び */
+  .voice-carousel {
+    overflow: visible;
+  }
+
+  .voice-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow-x: visible;
+    padding: 0;
+  }
+
+  .voice-slide {
+    width: auto;
+    max-width: none;
+  }
+
+  .voice-card {
+    padding: 28px 20px;
+  }
+
+  .voice-card-photo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .voice-card-area {
+    font-size: 16px;
+  }
+
+  .voice-card-company {
+    font-size: 14px;
+  }
+
+  .voice-card-detail {
+    font-size: 13px;
+    line-height: 1.8;
+  }
 }
 
 /* ============================================
