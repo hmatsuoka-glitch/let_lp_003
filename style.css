@@ -1898,8 +1898,9 @@ br.pc { display: none; }
 
   .mv-laurel {
     display: block;
-    width: 200px;
-    margin-bottom: 20px;
+    width: 600px;
+    margin-left: -20px;
+    margin-bottom: -60px;
     position: relative;
     z-index: 10;
     filter: drop-shadow(0 2px 12px rgba(245,200,66,0.4));
