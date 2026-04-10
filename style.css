@@ -1898,21 +1898,24 @@ br.pc { display: none; }
 
   .mv-laurel {
     display: block;
-    width: 130px;
-    margin-bottom: 16px;
+    width: 200px;
+    margin-bottom: 20px;
   }
 
   .mv-copy-sub {
-    font-size: 28px;
+    font-size: 32px;
     letter-spacing: 0.15em;
+    text-shadow: 0 0 20px rgba(255,255,255,0.6), 2px 2px 8px rgba(0,0,0,0.5);
   }
 
   .mv-copy-sns {
-    font-size: 80px;
+    font-size: 88px;
+    text-shadow: 0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.2), 3px 3px 12px rgba(0,0,0,0.5);
   }
 
   .mv-copy-main {
-    font-size: 96px;
+    font-size: 104px;
+    text-shadow: 0 0 30px rgba(245,200,66,0.6), 0 0 60px rgba(245,200,66,0.3), 3px 3px 12px rgba(0,0,0,0.5);
   }
 
   .mv-sub-copy-text {
