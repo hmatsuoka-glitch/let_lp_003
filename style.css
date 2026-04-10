@@ -1223,6 +1223,39 @@ br.pc { display: none; }
   padding: 8px 0;
 }
 
+/* カード補足テキスト */
+.cost-card-note {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.7;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.cost-card-intro {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ビジネスモデルまとめボックス */
+.biz-result-box {
+  background: linear-gradient(135deg, #4a90d9, #004e9b);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.biz-result-text {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.6;
+}
+
 /* ============================================
    Strength Result (建設業はすぐに結果が出ます)
    ============================================ */
