@@ -180,7 +180,7 @@ button {
 
 .mv-content {
   position: relative;
-  z-index: 3;
+  z-index: 10;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -192,10 +192,10 @@ button {
   z-index: 2;
 }
 
-/* 5人の作業員配置（参考デザイン: 右側にグループ） */
+/* 5人の作業員配置（右側にグループ、間隔広め） */
 .mv-deco-p1 {
   bottom: 0;
-  right: 30%;
+  right: 36%;
   height: 82%;
   z-index: 4;
   filter: drop-shadow(2px 4px 16px rgba(0,0,0,0.6));
@@ -203,7 +203,7 @@ button {
 
 .mv-deco-p2 {
   bottom: 0;
-  right: 16%;
+  right: 19%;
   height: 72%;
   z-index: 3;
   filter: drop-shadow(2px 4px 14px rgba(0,0,0,0.5));
@@ -211,7 +211,7 @@ button {
 
 .mv-deco-p3 {
   bottom: 0;
-  right: 22%;
+  right: 27%;
   height: 68%;
   z-index: 2;
   filter: drop-shadow(2px 4px 14px rgba(0,0,0,0.5));
@@ -219,7 +219,7 @@ button {
 
 .mv-deco-p4 {
   bottom: 0;
-  right: 9%;
+  right: 11%;
   height: 76%;
   z-index: 3;
   filter: drop-shadow(2px 4px 14px rgba(0,0,0,0.5));
@@ -227,7 +227,7 @@ button {
 
 .mv-deco-p5 {
   bottom: 0;
-  right: 1%;
+  right: 2%;
   height: 90%;
   z-index: 5;
   filter: drop-shadow(-2px 4px 16px rgba(0,0,0,0.6));
@@ -1900,6 +1900,9 @@ br.pc { display: none; }
     display: block;
     width: 200px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 2px 12px rgba(245,200,66,0.4));
   }
 
   .mv-copy-sub {
