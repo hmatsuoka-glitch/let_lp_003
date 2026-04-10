@@ -1367,12 +1367,32 @@ br.pc { display: none; }
   padding: 16px 32px 32px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   position: relative;
+  overflow: hidden;
+  border-top: 4px solid #004e9b;
+}
+
+.strength-item::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 180px;
+  font-weight: 900;
+  color: rgba(0, 78, 155, 0.05);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.strength-num-area {
+  position: relative;
+  z-index: 1;
 }
 
 .strength-num {
   font-size: 72px;
   font-weight: 900;
-  color: #000;
+  color: #004e9b;
   position: relative;
   display: inline-block;
 }
@@ -1382,13 +1402,15 @@ br.pc { display: none; }
   height: 4px;
   background: #cc0000;
   margin-top: -8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .strength-item h3 {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .strength-item h3 strong {
