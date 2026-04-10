@@ -1863,13 +1863,13 @@ br.pc { display: none; }
 
   /* Concerns Box — PC */
   .concerns-box {
-    max-width: 700px;
-    padding: 2.4rem 3rem;
+    max-width: 800px;
+    padding: 2.4rem 3.5rem;
   }
 
   .concerns-box p {
-    font-size: 1.1rem;
-    line-height: 2.4;
+    font-size: 1.05rem;
+    line-height: 2.2;
   }
 
   /* MV — PC: 画像を隠してCSS版を表示 */
