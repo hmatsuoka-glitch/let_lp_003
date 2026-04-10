@@ -1975,7 +1975,7 @@ br.pc { display: none; }
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     max-width: 1000px;
-    align-items: start;
+    align-items: stretch;
   }
 
   .cost-compare-card {
