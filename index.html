@@ -42,7 +42,7 @@
 
   <!-- Concerns -->
   <section class="concerns">
-    <h2 class="concerns-heading">こんな<span>お悩み</span>は<br>ありませんか？</h2>
+    <h2 class="concerns-heading fade-in">こんな<span>お悩み</span>は<br>ありませんか？</h2>
     <figure class="concerns-figure">
       <div class="concerns-bubbles">
         <div class="bubble bubble-1">採用しても<br><strong>すぐに辞めてしまう</strong></div>
@@ -51,7 +51,7 @@
         <div class="bubble bubble-3">本当に採用したい<br><strong>人が来ない...</strong></div>
       </div>
     </figure>
-    <div class="concerns-box">
+    <div class="concerns-box fade-in">
       <p>建設業にとって<span class="concerns-bold">人材不足は<br class="sp">事業継続を脅かす最も深刻なリスク</span>です。</p>
       <p>熟練者の引退と若手不足が進む今、対策を<br class="sp">怠れば工期遅延・受注減に直結します。</p>
       <p>今こそ、人材確保のための採用改革に<br class="sp">本気で取り組む時です。</p>
@@ -61,16 +61,16 @@
   <!-- About -->
   <section class="about">
     <div class="container">
-      <div class="about-hero-img">
+      <div class="about-hero-img fade-in">
         <img src="images/genba.png" alt="現場の空気感・社員の人柄・チームの関係性">
         <div class="about-bg-text">LET</div>
       </div>
-      <div class="about-text-block">
+      <div class="about-text-block fade-in delay-2">
         <p>SNS運用で、<strong class="text-blue">求職者に"働くイメージ"を届けること</strong>ができます。</p>
         <p>現場の雰囲気や社員の声を発信することで、若年層に親しみや魅力を伝えられ、<strong class="text-blue">応募数の増加</strong>につながっています。</p>
         <p>LETは建設業界の採用に<strong class="text-blue">豊富な実績</strong>を持っています。</p>
       </div>
-      <div class="stats-medals">
+      <div class="stats-medals scale-in">
         <img src="images/medals.png" alt="支援会社数・SNS経由応募者数・満足度">
       </div>
       <div class="stats-notes">
@@ -176,7 +176,7 @@
   <!-- UP -->
   <section class="up-section">
     <div class="container">
-      <h2 class="up-heading">ブランディング動画で<br>他県から理想の人材が集まります！</h2>
+      <h2 class="up-heading fade-in">ブランディング動画で<br>他県から理想の人材が集まります！</h2>
       <div class="up-badges">
         <div class="up-badge">
           <div class="up-circle">
@@ -219,21 +219,21 @@
   <!-- Strength -->
   <section class="strength">
     <div class="container">
-      <h2 class="strength-title"><span class="strength-title-sub">LETの</span><br>3つの強み</h2>
+      <h2 class="strength-title fade-in"><span class="strength-title-sub">LETの</span><br>3つの強み</h2>
       <div class="strength-items">
-        <div class="strength-item">
+        <div class="strength-item fade-in">
           <div class="strength-num-area"><span class="strength-num">1</span><div class="red-line"></div></div>
           <h3>リール動画の<br><strong>企画〜制作</strong></h3>
           <img src="images/strength1.jpg" alt="撮影風景">
           <p>プロのクリエイターがリール動画の企画から撮影・編集までワンストップで対応。採用に直結するコンテンツを制作し、御社の魅力を最大限に発信します。</p>
         </div>
-        <div class="strength-item">
+        <div class="strength-item fade-in delay-2">
           <div class="strength-num-area"><span class="strength-num">2</span><div class="red-line"></div></div>
           <h3>フォロワー増加施策と<br><strong>採用導線の設計</strong></h3>
           <img src="images/strength2.jpg" alt="データ分析">
           <p>データ分析に基づいたフォロワー増加施策を実施。ただフォロワーを増やすだけでなく、求職者を「応募」に繋げる採用導線を設計します。</p>
         </div>
-        <div class="strength-item">
+        <div class="strength-item fade-in delay-4">
           <div class="strength-num-area"><span class="strength-num">3</span><div class="red-line"></div></div>
           <h3>採用に特化した<br><strong>運用代行</strong></h3>
           <img src="images/strength3.jpg" alt="チーム打ち合わせ">
@@ -287,7 +287,7 @@
   <section class="mid-cta">
     <div class="mid-cta-overlay">
       <div class="container">
-        <p class="mid-cta-text">建設人材に超特化。<br>理想人材が全国から集まるSNS採用</p>
+        <p class="mid-cta-text fade-in">建設人材に超特化。<br>理想人材が全国から集まるSNS採用</p>
         <p class="mid-cta-sub">今こそ始めてみませんか？</p>
         <a href="#contact" class="cta-btn cta-btn--blue"><span class="cta-free">相談無料</span>まずはお問い合わせください →</a>
       </div>
@@ -443,6 +443,24 @@
   </div>
 
   <script>
+    // Scroll animations (IntersectionObserver)
+    (function() {
+      var targets = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        targets.forEach(function(el) { observer.observe(el); });
+      } else {
+        targets.forEach(function(el) { el.classList.add('visible'); });
+      }
+    })();
+
     // Achievement carousel (スマホモックアップスライダー)
     (function() {
       var idx = 0;
